@@ -1,5 +1,5 @@
 <template>
-    <body style="height: 100vh; margin-top:-30px;">
+    <body style="height: 100vh; margin-top:40px;">
     <div class="d-flex align-items-center justify-content-center h-100" style="flex-direction: column; margin-top:-30px;">
             <div id = "message" style="width:1000px;" >
             <p class="alert alert-success" v-if="message === 'success'" >{{success}}</p>
