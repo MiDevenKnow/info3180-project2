@@ -14,7 +14,7 @@ import jwt
 import psycopg2
 from sqlalchemy.sql.expression import desc 
 from app import app, db, login_manager
-from flask import request, jsonify, render_template,g,send_from_directory
+from flask import request, jsonify, render_template,g,send_from_directory, send_file
 from flask_login import login_user, logout_user, current_user, login_required
 from app.forms import  LoginForm, RegisterForm,carForm
 from app.models import Users,Cars,Favourites
@@ -368,7 +368,7 @@ def logout():
 # application.
 @app.route('/')
 def index():
-    return jsonify(message="This is the beginning of our API")
+    return send_file(os.path.join('../dist/', 'index.html'))
 
 # Here we define a function to collect form errors from Flask-WTF
 # which we can later use
